@@ -26,7 +26,7 @@
       name="impersonate"
       for="plone.app.layout.navigation.interfaces.INavigationRoot"
       class=".impersonate.Impersonate"
-      permission="cmf.ManagePortal"
+      permission="collective.impersonate.CanImpersonate"
       />
 
 </configure>

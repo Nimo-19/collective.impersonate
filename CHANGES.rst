@@ -6,6 +6,8 @@ Changelog
 
 - Replace ``pkg_resources`` namespace with PEP 420 native namespace.
   Support only Plone 6.2 and Python 3.10+.
+- Add impersonate permission and Impersonater role
+  [Nimo-19]
 
 2.0 (2024-10-21)
 ----------------
