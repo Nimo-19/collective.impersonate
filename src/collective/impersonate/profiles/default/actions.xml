@@ -18,7 +18,7 @@
       <property name="link_target" />
       <property name="icon_expr">string:people</property>
       <property name="permissions">
-        <element value="Manage Site" />
+        <element value="collective.impersonate: Can Impersonate" />
       </property>
       <property name="visible">True</property>
     </object>
