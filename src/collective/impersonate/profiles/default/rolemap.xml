@@ -10,6 +10,11 @@
     >
       <role name="Impersonater" />
     </permission>
+    <permission acquire="True"
+                name="Plone Site Setup: Users and Groups"
+    >
+      <role name="Impersonater" />
+    </permission>
     <!-- -*- extra stuff goes here -*- -->
   </permissions>
 </rolemap>

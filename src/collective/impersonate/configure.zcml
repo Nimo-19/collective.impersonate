@@ -8,10 +8,12 @@
   <i18n:registerTranslations directory="locales" />
 
   <include package="plone.api" />
+  <include package="plone.restapi" />
+
+  <include file="permissions.zcml" />
 
   <include package=".browser" />
-  <include package=".service" />
-  <include file="permissions.zcml" />
+  <include package=".services" />
 
 
   <genericsetup:registerProfile

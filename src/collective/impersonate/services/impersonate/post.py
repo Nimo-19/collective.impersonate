@@ -1,5 +1,6 @@
 from Acquisition import aq_inner
 from Acquisition import aq_parent
+from collective.impersonate.api.impersonate import impersonateUser
 from plone import api
 from plone.restapi.deserializer import json_body
 from plone.restapi.services import Service
@@ -62,6 +63,8 @@ class Impersonate(Service):
 
         payload = {}
         payload["fullname"] = user.getProperty("fullname")
+
+        impersonateUser(self.context, userid)
         return {"token": plugin.create_token(user.getId(), data=payload)}
 
     def _find_userfolder(self, userid):

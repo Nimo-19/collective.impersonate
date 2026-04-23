@@ -1,5 +1,6 @@
 """@@impersonate view handler."""
 
+from collective.impersonate.api.impersonate import impersonateUser
 from plone import api
 
 
@@ -28,13 +29,8 @@ class Impersonate(BrowserView):
         if "username" in list(self.request.keys()):
             self.errors = {}
             username = self.request["username"].strip()
-            if not api.user.get(username=username):
-                self.errors["username"] = username
-                return
 
-            self.context.acl_users.session._setupSession(
-                username, self.context.REQUEST.RESPONSE
-            )
+            impersonateUser(username)
 
             self.request.RESPONSE.redirect(self.context.absolute_url())
 
